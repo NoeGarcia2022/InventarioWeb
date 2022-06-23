@@ -22,11 +22,13 @@
           </a>
         </div>
     </nav>-->
+   	
     
-     <nav class="navbar navbar-expand-lg" style="background-color: #ffc107;">
+
+     <nav  class="navbar navbar-expand-lg" style="background-color: aquamarine;">
         <div class="container-fluid">
            <!--<a class="navbar-brand" href="#">Navbar</a>-->
-              <img src="assets/img/inventario.png" alt="" width="30" height="24"><strong style="color: #fff;">&nbsp;Inventario 2022</strong> 
+           <strong style="color: #fff;">&nbsp;<h2  style="color: #6f42c1;"><p class="fst-italic">INVENTARIO 2022</p></h2></strong> 
               
               <div class="collapse navbar-collapse d-grid gap-5 d-md-flex justify-content-md-end" id="navbarNav">
                 <ul class="navbar-nav">
@@ -34,7 +36,7 @@
                       <a class="nav-link" aria-current="page" href="Index">&nbsp;</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Index">Inicio</a>
+                    <a style="color: lightblue"class="nav-link active" aria-current="page" href="Index">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="categorias?opcion=listar">Categorias</a>
@@ -57,6 +59,4 @@
         
         </div>
     </nav>
-    
-    
     <div class="contenido">

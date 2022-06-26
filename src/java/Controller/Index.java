@@ -14,6 +14,17 @@ public class Index extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String accion=request.getParameter("accion");
+        switch(accion){
+            case "index":
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+                break;
+            case "listarCategorias":
+                request.getRequestDispatcher("listarCategorias.jsp").forward(request, response);
+                break;
+            default:
+                throw new AssertionError();
+        }
         /*
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {

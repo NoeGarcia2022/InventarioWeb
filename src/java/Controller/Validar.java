@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Empleado;
+import Model.EmpleadoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,6 +19,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author ITCA
  */
 public class Validar extends HttpServlet {
+    
+    EmpleadoDAO edao= new EmpleadoDAO();
+    Empleado em=new Empleado();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -74,10 +79,16 @@ public class Validar extends HttpServlet {
         if(accion.equalsIgnoreCase("Ingresar")){
             String user=request.getParameter("txtuser");
             String pass=request.getParameter("txtpass");
-            
+            em=edao.validar(user, pass);
+            if (em.getUser()!=null){
+                request.setAttribute("usuario", em);
+                request.getRequestDispatcher("Index?accion=index").forward(request, response);
+            }else{
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
+            }
         }
         else{
-        
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         }
     }
 

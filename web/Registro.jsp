@@ -60,12 +60,7 @@
                             Formulario <br />
                             <span style="color: hsl(218, 81%, 75%)">de Registro</span>
                         </h1>
-                        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Temporibus, expedita iusto veniam atque, magni tempora mollitia
-                            dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-                            ab ipsum nisi dolorem modi. Quos?
-                        </p>
+                      
                     </div>
 
                     <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
@@ -123,19 +118,10 @@
                                         <label for="clave">Contraseña</label>
                                     </div>
 
-                                    <!-- Checkbox -->
-                                    <div class="form-check d-flex justify-content-center mb-4">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                                        <label class="form-check-label" for="form2Example33">
-                                            Subscribe to our newsletter
-                                        </label>
-                                    </div>
+                                   
 
-                                    <!-- Submit button -->
-                                    <button type="submit" class="btn btn-primary btn-block mb-4">
-                                        
-                                    </button>
-                                    <input type="button" class="btn btn-danger btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>/categorias?opcion=listar')"/> 
+                                    <input type="button" class="btn btn-primary btn-block " name="btnRegistrar" value="Registrar">
+                                    <input type="button" class="btn btn-danger btn-block" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>/categorias?opcion=listar')"/> 
                                 </form>
                             </div>
                         </div>

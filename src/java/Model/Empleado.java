@@ -5,22 +5,26 @@ public class Empleado {
     int id;
     String dui;
     String nom;
+    String apell;
     String email;
     String tel;
     String estado;
     String user;
+    String clave;
 
     public Empleado() {
     }
 
-    public Empleado(int id, String dui, String nom, String email, String tel, String estado, String user) {
+    public Empleado(int id, String dui, String nom, String apell, String email, String tel, String estado, String user, String clave) {
         this.id = id;
         this.dui = dui;
         this.nom = nom;
+        this.apell = apell;
         this.email = email;
         this.tel = tel;
         this.estado = estado;
         this.user = user;
+        this.clave = clave;
     }
 
     public int getId() {
@@ -45,6 +49,14 @@ public class Empleado {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+    
+    public String getApell() {
+        return apell;
+    }
+
+    public void setApell(String apell) {
+        this.apell = apell;
     }
     
     public String getEmail() {
@@ -77,6 +89,14 @@ public class Empleado {
 
     public void setUser(String user) {
         this.user = user;
+    }
+    
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
     
 }

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : Login
-    Created on : 06-25-2022, 03:40:13 PM
-    Author     : DELL
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -61,7 +56,7 @@
                                                 </div>
 
                                                 <a class="small text-muted" href="#!">¿Se te olvidó tu contraseña?</a>
-                                                <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="#!"
+                                                <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="Registro.jsp"
                                                                                                                           style="color: #393f81;">Registrese aqui</a></p>
                                                 <a href="#!" class="small text-muted">Términos de Uso.</a>
                                                 <a href="#!" class="small text-muted">Política de privacidad</a>

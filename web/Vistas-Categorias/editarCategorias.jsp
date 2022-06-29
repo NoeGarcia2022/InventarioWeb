@@ -44,7 +44,7 @@
         </div>
           
           <div class="mb-3 row">
-          <button type="submit" name="send" class="btn btn-success">Actualizar Categoria</button>
+          <button type="submit" name="send" class="btn btn-primary mb-3">Actualizar Categoria</button>
           </div>
         </form>
           

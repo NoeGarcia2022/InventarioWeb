@@ -22,7 +22,7 @@
                         <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Index?opcion=index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
-                            <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#">Productos</a>
+                            <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="productos?opcionP=listarP">Productos</a>
                         </li>
                     <li class="nav-item">
                         <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="categorias?opcion=listar">Categorias</a>

@@ -4,27 +4,39 @@ package Model;
 public class Producto {
     private int id_producto;
     private String nom_producto;
-    private int catogoria_id;
+    private int categoria_id;
     private float stock;
     private float precio;
     private String unidadMedida;
     private int estado;
     private Categoria categoria;
+    private String cat;
+
+    
 
     public Producto() {
         this.id_producto = 0;
+        this.nom_producto = "";
+        this.categoria_id=0;
+        this.stock = 0.0f;
+        this.precio=0.0f;
+        this.unidadMedida="";
+        this.estado=1;
         this.categoria = new Categoria();
+        this.cat="";
     }
-
-    public Producto(int id_producto, String nom_producto, int catogoria_id, float stock, float precio, String unidadMedida, int estado, Categoria categoria) {
+    
+    public Producto(int id_producto, String nom_producto, int categoria_id, float stock, float precio, String unidadMedida, int estado, Categoria categoria,String cat) {
         this.id_producto = id_producto;
         this.nom_producto = nom_producto;
-        this.catogoria_id = catogoria_id;
+        this.categoria_id = categoria_id;
         this.stock = stock;
         this.precio = precio;
         this.unidadMedida = unidadMedida;
         this.estado = estado;
         this.categoria = categoria;
+        this.cat=cat;
+
     }
 
     public int getId_producto() {
@@ -43,12 +55,12 @@ public class Producto {
         this.nom_producto = nom_producto;
     }
 
-    public int getCatogoria_id() {
-        return catogoria_id;
+    public int getCategoria_id() {
+        return categoria_id;
     }
 
-    public void setCatogoria_id(int catogoria_id) {
-        this.catogoria_id = catogoria_id;
+    public void setCategoria_id(int categoria_id) {
+        this.categoria_id = categoria_id;
     }
 
     public float getStock() {
@@ -90,7 +102,13 @@ public class Producto {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-    
+    public String getCat() {
+        return cat;
+    }
+
+    public void setCat(String cat) {
+        this.cat = cat;
+    }
     
     
     

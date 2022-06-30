@@ -20,6 +20,14 @@
         <servlet-name>Validar</servlet-name>
         <servlet-class>Controller.Validar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Productos</servlet-name>
+        <servlet-class>Controller.Productos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>actualizoProducto</servlet-name>
+        <servlet-class>Controller.actualizoProducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>Validar</servlet-name>
         <url-pattern>/Validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Productos</servlet-name>
+        <url-pattern>/productos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>actualizoProducto</servlet-name>
+        <url-pattern>/actualizoProducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,7 +19,7 @@
     </head>
     <body>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        <div class="col-auto bg-gray p-5 text-center">
+        <div class="col-auto bg-gray p-5 text-center ">
             <h1>Baja de Categorias</h1>
             
             <h4 style="color: seagreen">¿Realmente Desea Eliminar el Registro?</h4>

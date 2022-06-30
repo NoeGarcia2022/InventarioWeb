@@ -22,14 +22,22 @@
     <body class="justify-content-center">
         
         <style>
-            label{
-                color: green
-               }
-               
+            
+        form{
+	width:600px;
+	padding:16px;
+	border-radius:14px;
+	margin:auto;
+	background-color:#ccc;
+       }
+       label{
+           font-weight:bold;
+	display:inline-block;
+       }
         </style>
         
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center">
+         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
             <h3 class='text-center'>Registro Categorias</h3>
             
             <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath() %>/categorias" method="post">
@@ -53,8 +61,8 @@
                     <div class="row">&nbsp;</div>
                    <div class="form-group">
                        <div class="col-sm-offset-2 col-sm-12">
-                           <input type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/> 
-                           <input type="button" class="btn btn-outline-dark btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>/categorias?opcion=listar')"/> 
+                           <input type="submit" class="btn btn-info btn-sm" value="Guardar" name="btnGuardar"/> 
+                           <input type="button" class="btn btn-dark btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>/categorias?opcion=listar')"/> 
                        </div>
                    </div>
                    

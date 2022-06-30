@@ -20,12 +20,33 @@
         <style>
             label{
               color:green  
-              
+          }   
+               form{
+	width:600px;
+	padding:16px;
+	border-radius:14px;
+	margin:auto;
+	background-color:#ccc;
+       }
+       form label{
+	width:74px;
+	font-weight:bold;
+	display:inline-block;
+}
+       form input[type="text"],
+       form input[type="email"]{
+	width:360px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
             }
             
         </style>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center">
+         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
         <h1 class='text-center'>Información de Categoria</h1>
         <form action="actualizarCategoria" method="post">
         <div class="mb-3 row">
@@ -51,8 +72,8 @@
           </div>
         </div>
           
-          <div class="mb-3 row">
-          <button type="submit" name="send" class="btn btn-primary mb-3">Actualizar Categoria</button>
+          <div class="col-sm-offset-2 col-sm-12">
+          <button type="submit" name="send" class="btn btn-info btn-sm">Actualizar Categoria</button>
           </div>
         </form>
           

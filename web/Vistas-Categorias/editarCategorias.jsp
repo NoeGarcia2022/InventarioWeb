@@ -17,12 +17,20 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <body class="justify-content-center">
+        <style>
+            label{
+              color:green  
+              
+            }
+            
+        </style>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
          <div class="col-auto bg-gray p-5 text-center">
         <h1 class='text-center'>Información de Categoria</h1>
         <form action="actualizarCategoria" method="post">
         <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label>
+            <label for="staticEmail" class="col-sm-2 col-form-label">
+                <p class="fs-6">ID Categoria:</p></label>
             <div class="col-sm-10">
               <input type="text" value='<%= id_cat %>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Categoria">
               <input type="hidden" value='<%= id_cat %>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" >
@@ -30,7 +38,7 @@
         </div>
             
         <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Nombre Categoria:</label>
+            <label for="inputPassword" class="col-sm-2 col-form-label"> <p class="fs-6">Nombre Categoria:</p></label>
           <div class="col-sm-10">
               <input type="text" value='<%= nombre_cat %>' name="nombre" id="nombre" class="form-control" placeholder="Nombre Categoria" required="true">
           </div>

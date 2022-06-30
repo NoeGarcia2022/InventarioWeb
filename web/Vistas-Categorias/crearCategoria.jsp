@@ -18,7 +18,16 @@
              }
          </script>
     </head>
+    
     <body class="justify-content-center">
+        
+        <style>
+            label{
+                color: green
+               }
+               
+        </style>
+        
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
          <div class="col-auto bg-gray p-5 text-center">
             <h3 class='text-center'>Registro Categorias</h3>
@@ -27,7 +36,7 @@
               <div class="row">&nbsp;</div>
                 <input type="hidden" name="id_categoria" id="id_categoria" value="<%= categoria.getId_categoria() %>" >
                 <div class="mb-3 row">
-                   <label for="txtNomCategoria" class="col-sm-2 col-form-label">Nombre Categoria</label>
+                   <label for="txtNomCategoria" class="col-sm-2 col-form-label" >Nombre Categoria</label>
                    <div class="col-sm-10">
                        <input type="text" class="form-control" name="txtNomCategoria" id="txtNomCategoria" value="<%= categoria.getNom_categoria() %>" placeholder="Nombre categoria" required="true"> 
                    </div>

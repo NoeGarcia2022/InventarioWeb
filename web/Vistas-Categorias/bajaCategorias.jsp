@@ -22,7 +22,7 @@
         <div class="col-auto bg-gray p-5 text-center">
             <h1>Baja de Categorias</h1>
             
-            <h4>¿Realmente Desea Eliminar el Registro?</h4>
+            <h4 style="color: seagreen">¿Realmente Desea Eliminar el Registro?</h4>
             <h5>ID Categoria: <%= id_cat %></h5>
             <h5>Nombre Categoria: <%= nombre_cat %></h5>
         </div>
@@ -30,7 +30,7 @@
         <!---->
         
         <div class="d-grid gap-5 d-md-flex justify-content-md-center">
-            <a href="bajaCategoria?respuesta=yes&&id=<%= id_cat %>" class="btn btn-primary btn-lg" role="button">Si / Aceptar</a>
+            <a href="bajaCategoria?respuesta=yes&&id=<%= id_cat %>" class="btn btn-danger btn-lg" role="button">Si / Aceptar</a>
             <!--<a href="< //request.getContextPath() >" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>-->
             <a href="categorias?opcion=listar" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>
             

@@ -17,7 +17,7 @@
        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         <!--<div style="width: 600px;">-->
-        <div class="col-auto bg-gray p-5 text-center">
+        <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
             <a href="<%= request.getContextPath() %>/productos?opcionP=crearP" class ="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">
                 Nuevo Producto
             </a>

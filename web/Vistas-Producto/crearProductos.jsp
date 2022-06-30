@@ -26,50 +26,70 @@
          </script>
     </head>
     <body class="justify-content-center">
+        
+        <style>
+            form{
+         background-color: #fff;
+         width:600px;
+	padding:16px;
+	border-radius:14px;
+	margin:auto;
+	background-color:aquamarine;
+       }
+       label{
+           font-weight:bold;
+       }
+
+         .formulario{
+         background-color:#fff;
+         border: 12px solid green;
+         }
+        </style>
+        
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center">
+         <div class="col-auto bg-gray p-5 " style="border: 12px solid ">
             <h3 class='text-center'>Registro Productos</h3>
             <form class="form-horizontal" id="frmProducto" name="frmProducto" action="<%= request.getContextPath() %>/productos" method="post">
                 <div class="row">&nbsp;</div>
                 <input type="hidden" name="idPro" id="idPro" value="<%= pro.getId_producto()%>" >
-                <div class="form-group">
-                   <label for="txtNomProducto" class="col-sm-2 control-label">Nombre Producto</label>
+                <div class="mb-3">
+                   <label for="txtNomProducto" class="form-label">Nombre Producto</label>
                    <div class="col-sm-12">
                        <input type="text" class="form-control" name="txtNomProducto" id="txtNomProducto" value="<%= pro.getNom_producto()%>" placeholder="Nombre productos" required="true"> 
                    </div>
                 </div>
                    
-                <div class="form-group">
-                   <label for="txtStock" class="col-sm-2 control-label">Stock</label>
+                <div class="mb-3">
+                   <label for="txtStock" class="form-label">Stock</label>
                    <div class="col-sm-12">
                        <input type="text" class="form-control" name="txtStock" id="txtStock" value="<%= pro.getStock()%>" placeholder="Stock" required="true"> 
                    </div>
                 </div>
                    
-                <div class="form-group">
-                   <label for="txtPrecio" class="col-sm-2 control-label">Precio</label>
+                <div class="mb-3">
+                   <label for="txtPrecio" class="form-label">Precio</label>
                    <div class="col-sm-12">
                        <input type="text" class="form-control" name="txtPrecio" id="txtPrecio" value="<%= pro.getPrecio()%>" placeholder="Precio" required="true"> 
                    </div>
                 </div>
                    
-                <div class="form-group">
-                   <label for="txtUnidad" class="col-sm-2 control-label">Unidad de Medida</label>
+                <div class="mb-3">
+                   <label for="txtUnidad" class="-form-label">Unidad de Medida</label>
                    <div class="col-sm-12">
                        <input type="text" class="form-control" name="txtUnidad" id="txtUnidad" value="<%= pro.getUnidadMedida()%>" placeholder="Unidad de Medida" required="true"> 
                    </div>
                 </div>
                    
-                <div class="form-group">
-                   <label for="numEstado" class="col-sm-2 control-label">Estado</label>
+                <div class="mb-3">
+                   <label for="numEstado" class="form-label">Estado</label>
                    <div class="col-sm-12">
                        <input type="number" class="form-control" name="numEstado" id="numEstado" value="<%= pro.getEstado()%>" placeholder="Categoria" required="true"> 
                    </div>
                 </div>
                   
                    
-             <div class="form-group ">
-                   <label for="opCat" class="col-sm-2 control-label">Categoria</label>
+             <div class="mb-3 ">
+                   <label for="opCat" class="form-label">Categoria</label>
                    <div class="custom-select col-sm-12">
                          <select class="form-control" name="opCat" id="opCat" required>
                              <option>Selecciones una opcion</option>>
@@ -91,7 +111,7 @@
                     <div class="row">&nbsp;</div>
                    <div class="form-group">
                        <div class="col-sm-offset-2 col-sm-12">
-                           <input type="submit" class="btn btn-success btn-sm" value="Guardar" name="btnGuardar"/> 
+                           <input type="submit" class="btn btn-secondary btn-sm" value="Guardar" name="btnGuardar"/> 
                            <input type="button" class="btn btn-danger btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>/productos?opcionP=listarP')"/> 
                        </div>
                    </div>

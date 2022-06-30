@@ -60,7 +60,7 @@ public class BajaProducto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
         String respuesta = request.getParameter("respuesta");
          String id_pro = request.getParameter("idP");
          

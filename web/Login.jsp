@@ -56,8 +56,8 @@
                                                 </div>
 
                                                 <a class="small text-muted" href="#!">¿Se te olvidó tu contraseña?</a>
-                                                <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="<%= request.getContextPath()%>/registro?opcion=crear" class ="btn btn-primary btn-sm glyphicon glyphicon-pencil" role="button">
-                                                        Registrar
+                                                <p class="mb-5 pb-lg-2" style="color: #393f81;">¿No tienes una cuenta? <a href="<%= request.getContextPath()%>/registroo?opcion=crear" class ="btn btn-primary btn-sm glyphicon glyphicon-pencil" role="button">
+                                                        Registrarse
                                                     </a></p>
                                                 <a href="#!" class="small text-muted">Términos de Uso.</a>
                                                 <a href="#!" class="small text-muted">Política de privacidad</a>

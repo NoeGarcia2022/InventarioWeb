@@ -14,6 +14,16 @@ public class Empleado {
     int tipo;
 
     public Empleado() {
+        this.id=0;
+        this.nom="";
+        this.apell="";
+        this.email="";
+        this.tel="";
+        this.estado=0;
+        this.user="";
+        this.clave="";
+        this.tipo=0;
+        this.dui="";
     }
 
     public Empleado(int id, String dui, String nom, String apell, String email, String tel, int estado, String user, String clave, int tipo) {

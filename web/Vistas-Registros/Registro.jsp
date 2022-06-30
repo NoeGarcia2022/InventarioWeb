@@ -74,8 +74,8 @@
 
                         <div class="card bg-glass">
                             <div class="card-body px-4 py-5 px-md-5">
-                                <form>
-                                        <input type="hidden" name="id_empleado" id="id_categoria" value="<%= empleado.getId() %>" >
+                                <form action="<%= request.getContextPath() %>/registroo" method="post">
+                                        <input type="hidden" name="id_empleado" id="id_empleado" value="<%= empleado.getId() %>" >
                                     <!-- 2 column grid layout with text inputs for the first and last names -->
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
@@ -140,7 +140,7 @@
 
 
                                     <input type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/>
-                                    <input type="button" class="btn btn-outline-dark btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>Login.jsp')"/>
+                                    <a href="Login.jsp">Regresar</a>
                             </div>
                         </div>
                     </div>

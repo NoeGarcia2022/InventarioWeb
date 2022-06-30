@@ -90,10 +90,10 @@ this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
             if(empleado.getId()== 0){
                 System.out.println("Guardar");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("INSERT INTO empleado(Nombres, Apellidos, Tipo, Estado, dui, Telefono, Email, User, Contraseña) values('");
-                miSQL.append(empleado.getNom()+ "', ").append(empleado.getApell()+ "', ").append(empleado.getTipo()+ "', ").append(empleado.getEstado()+ "', ")
-                .append(empleado.getDui()+ "', ").append(empleado.getTel()+ "', ").append(empleado.getEmail()+ "', ").append(empleado.getUser()+ "', ").append(empleado.getClave());
-                miSQL.append(");");
+                miSQL.append("INSERT INTO empleado(dui, Nombres, Apellidos, Email,  Telefono, User, Clave, Tipo, Estado) values('");
+                miSQL.append(empleado.getDui()+ "', '").append(empleado.getNom()+ "', '").append(empleado.getApell()+ "', '").append(empleado.getEmail()+ "', '")
+                .append(empleado.getTel()+ "', '").append(empleado.getUser()+ "', '").append(empleado.getClave()+ "', '").append(empleado.getTipo()+ "', '").append(empleado.getEstado());
+                miSQL.append("');");
                 this.conn.ejecutarSQL(miSQL.toString());
             }else if(empleado.getId()> 0){
                 
@@ -119,7 +119,8 @@ this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
             this.conn.cerrarConexion();
         }
         
-        return guarda;    }
+        return guarda;    
+    }
 
     @Override
     public boolean borrarEmp(int id_emp_borrar) {

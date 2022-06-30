@@ -100,7 +100,7 @@
                                  cats = daoC.Listar();
                                  for(Categoria cat : cats){
                                     %>
-                                   <option value="<%=cat.getId_categoria()%>"><%=cat.getId_categoria()+"-"+cat.getNom_categoria()%></option> 
+                                   <option value="<%=cat.getId_categoria()%>"><%=cat.getNom_categoria()%></option> 
 <%}%>
                         </select>
                             

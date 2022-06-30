@@ -8,14 +8,15 @@ public class Empleado {
     String apell;
     String email;
     String tel;
-    String estado;
+    int estado;
     String user;
     String clave;
+    int tipo;
 
     public Empleado() {
     }
 
-    public Empleado(int id, String dui, String nom, String apell, String email, String tel, String estado, String user, String clave) {
+    public Empleado(int id, String dui, String nom, String apell, String email, String tel, int estado, String user, String clave, int tipo) {
         this.id = id;
         this.dui = dui;
         this.nom = nom;
@@ -25,6 +26,7 @@ public class Empleado {
         this.estado = estado;
         this.user = user;
         this.clave = clave;
+        this.tipo = tipo;
     }
 
     public int getId() {
@@ -75,11 +77,11 @@ public class Empleado {
         this.tel = tel;
     }
 
-    public String getEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
 
@@ -97,6 +99,14 @@ public class Empleado {
 
     public void setClave(String clave) {
         this.clave = clave;
+    }
+    
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
     
 }

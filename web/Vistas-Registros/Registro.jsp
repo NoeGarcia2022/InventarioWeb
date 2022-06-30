@@ -1,12 +1,17 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="empleado" scope="session" class="Model.Empleado" />
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+        <script type="text/javascript">
+             function regresar(url){
+                 location.href = url;
+             }
+         </script>
     </head>
     <body>
         <!-- Section: Design Block -->
@@ -70,18 +75,18 @@
                         <div class="card bg-glass">
                             <div class="card-body px-4 py-5 px-md-5">
                                 <form>
-
+                                        <input type="hidden" name="id_empleado" id="id_categoria" value="<%= empleado.getId() %>" >
                                     <!-- 2 column grid layout with text inputs for the first and last names -->
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="nombre" placeholder="ingrese su nombre">
+                                                <input type="text" class="form-control" name="txtnombre" value="<%= empleado.getNom() %>" placeholder="ingrese su nombre">
                                                 <label for="nombre">Nombres</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="apellidos" placeholder="ingrese su apellido">
+                                                <input type="text" class="form-control" name="txtapellidos" value="<%= empleado.getApell() %> "placeholder="ingrese su apellido">
                                                 <label for="apellidos">Apellidos</label>
                                             </div>
                                         </div>
@@ -89,13 +94,13 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="tipo" placeholder="ingrese su nombre">
+                                                <input type="number" class="form-control" name="numbertipo" value="<%= empleado.getTipo() %>" placeholder="ingrese su nombre">
                                                 <label for="tipo">Tipo</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="estado" placeholder="ingrese su apellido">
+                                                <input type="number" class="form-control" name="numberEstado" value="<%= empleado.getEstado() %>" placeholder="ingrese su apellido">
                                                 <label for="estado">Estado</label>
                                             </div>
                                         </div>
@@ -103,13 +108,13 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="apellidos" placeholder="ingrese su dui">
+                                                <input type="text" class="form-control" name="txtdui" value="<%= empleado.getDui() %>" placeholder="ingrese su dui">
                                                 <label for="dui">DUI</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="telefono" placeholder="ingrese su telefono">
+                                                <input type="text" class="form-control" name="txtTel" value="<%= empleado.getTel() %>" placeholder="ingrese su telefono">
                                                 <label for="telefono">Telefono</label>
                                             </div>
                                         </div>
@@ -117,26 +122,25 @@
 
                                     <!-- Email input -->
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="email" placeholder="ingrese su correo">
+                                        <input type="email" class="form-control" name="txtemail" value="<%= empleado.getEmail() %>" placeholder="ingrese su correo">
                                         <label for="email">Correo Electronico</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="usuario" placeholder="ingrese un nombre de usuario">
+                                        <input type="text" class="form-control" name="txtUser" value="<%= empleado.getUser() %>" placeholder="ingrese un nombre de usuario">
                                         <label for="usuario">Usuario</label>
                                     </div>
 
                                     <!-- Password input -->
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" id="clave" placeholder="ingrese un contraseña">
+                                        <input type="password" class="form-control" name="txtClave" value="<%= empleado.getClave() %>" placeholder="ingrese un contraseña">
                                         <label for="clave">Contraseña</label>
                                     </div>
 
 
 
-                                    <input type="button" class="btn btn-primary btn-block " name="btnRegistrar" value="Registrar">
-                                    <input type="button" class="btn btn-danger btn-block" name="accion" value="Regresar"> 
-                                </form>
+                                    <input type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/>
+                                    <input type="button" class="btn btn-outline-dark btn-sm" name="btnRegresar" value="Regresar" onclick="regresar('<%= request.getContextPath() %>Login.jsp')"/>
                             </div>
                         </div>
                     </div>

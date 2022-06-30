@@ -64,11 +64,6 @@ public class Productos extends HttpServlet {
              String pagina = "/Vistas-Producto/crearProductos.jsp";
              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
              dispatcher.forward(request, response);
-         }else if(estadoP.equals("crearPrueba")){
-             System.out.println("Crear Productos...");
-             String pagina = "/Vistas-Producto/PruebaCrearP.jsp";
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
-             dispatcher.forward(request, response);
          }else{
              
          }
@@ -106,6 +101,7 @@ public class Productos extends HttpServlet {
          dispatcher.forward(request, response);
          
     }
+    
 
     @Override
     public String getServletInfo() {

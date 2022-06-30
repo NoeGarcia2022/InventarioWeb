@@ -56,8 +56,9 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
     @Override
     public List<Producto> ListarP2() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
+    
 
     @Override
     public Producto editarPro(int id_pro_edit) {
@@ -65,7 +66,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
         Producto producto = new Producto();
         StringBuilder miSQL = new StringBuilder();
         
-        miSQL.append("select * from tb_producto where id_producto = "+id_pro_edit);
+        miSQL.append("select * from tb_producto where id_producto = '"+id_pro_edit+"';");
         try{
             ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
             while(resultadoSQL.next()){
@@ -103,7 +104,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 
                 //System.out.println("Update");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("UPDATE tb_categoria SET id_producto = "+producto.getId_producto()+", nom_producto = "+producto.getNom_producto()+", stock = "+producto.getStock()+", precio = "+producto.getPrecio()+", unidad_de_medida = "+producto.getUnidadMedida()+", estado_producto = "+producto.getEstado()+", id_categoria = "+producto.getCategoria_id()+" WHERE id_producto = "+producto.getId_producto()+";");
+                miSQL.append("UPDATE tb_producto SET id_producto = '"+producto.getId_producto()+"', nom_producto = '"+producto.getNom_producto()+"', stock = '"+producto.getStock()+"', precio = '"+producto.getPrecio()+"', unidad_de_medida = '"+producto.getUnidadMedida()+"', estado_producto = '"+producto.getEstado()+"', id_categoria = '"+producto.getCategoria_id()+"' WHERE id_producto = "+producto.getId_producto()+";");
                 this.conn.ejecutarSQL(miSQL.toString());
             }
            guarda = true;

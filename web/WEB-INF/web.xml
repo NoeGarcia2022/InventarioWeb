@@ -25,8 +25,12 @@
         <servlet-class>Controller.Productos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>actualizoProducto</servlet-name>
+        <servlet-name>ActualizarProducto</servlet-name>
         <servlet-class>Controller.actualizoProducto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BajaProducto</servlet-name>
+        <servlet-class>Controller.BajaProducto</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
@@ -53,8 +57,12 @@
         <url-pattern>/productos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>actualizoProducto</servlet-name>
-        <url-pattern>/actualizoProducto</url-pattern>
+        <servlet-name>ActualizarProducto</servlet-name>
+        <url-pattern>/actualizarProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BajaProducto</servlet-name>
+        <url-pattern>/BajaProducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

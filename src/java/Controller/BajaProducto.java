@@ -7,7 +7,6 @@ package Controller;
 
 import DAO.ProductoDAOImplementar;
 import DAO.ProductoDAO;
-import Model.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -15,12 +14,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Jonat
  */
-public class actualizoProducto extends HttpServlet {
+public class BajaProducto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +39,10 @@ public class actualizoProducto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet actualizoProducto</title>");            
+            out.println("<title>Servlet BajaProducto</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet actualizoProducto at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet BajaProducto at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,56 +61,38 @@ public class actualizoProducto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        String respuesta = request.getParameter("respuesta");
+         String id_pro = request.getParameter("idP");
+         
+         /*if(respuesta.equals("yes")){
+              System.out.println("Respuesta: " + respuesta);
+         }*/
+         
+         ProductoDAO producto = new ProductoDAOImplementar();
+         //Categoria cat = new Categoria();
+         if(producto.borrarPro(Integer.parseInt(id_pro))){
+             System.out.println("Registro eliminado correctamente.");
+             this.listaProductos(request, response);
+         }else{
+             System.out.println("Error. No se pudo eliminar el registro.");
+         }
+        
+    }
+    
+    protected void listaProductos(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+         ProductoDAO producto = new ProductoDAOImplementar();
+         HttpSession sesion = request.getSession(true);
+         sesion.setAttribute("listaP", producto.ListarP());
+         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/listarProducto.jsp");
+         dispatcher.forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-         //String estado = request.getParameter("opcion");
-         String id_pro = request.getParameter("idP");
-         String nombre_pro = request.getParameter("nombreP");
-         String stock = request.getParameter("stock");
-         String precio = request.getParameter("precio");
-         String UnidadMedida = request.getParameter("unidadMedida");
-         String estado = request.getParameter("estado");
-         String categoria = request.getParameter("categoria");
-         String NCategoria = request.getParameter("opcat");
-         
-         /*
-         System.out.println("INFORMACIÓN RECIBIDA: ");
-         System.out.println("ID Categoria: " + id_cat);
-         System.out.println("Nombre Categoria: " + nombre_cat);
-         System.out.println("Estado Categoria: " + estado_cat);
-         */
-         
-         ProductoDAO producto = new ProductoDAOImplementar();
-         Producto pro = new Producto();
-         //cat.setId_categoria(Integer.parseInt(id_cat));
-         pro.setId_producto(Integer.parseInt(id_pro));
-         pro.setNom_producto(nombre_pro);
-         pro.setStock(Float.parseFloat(stock));
-         pro.setPrecio(Float.parseFloat(precio));
-         pro.setUnidadMedida(UnidadMedida);
-         pro.setEstado(Integer.parseInt(estado));
-         pro.setCategoria_id(Integer.parseInt(categoria));
-         if(producto.guardarPro(pro)==true){
-             //System.out.println("Registro Actualizado.");
-              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProducto.jsp?avisoP=ok");
-              dispatcher.forward(request, response);
-         }else{
-             System.out.println("Error. El registro no se pudo actualizar.");
-         }
-         
     }
 
     /**

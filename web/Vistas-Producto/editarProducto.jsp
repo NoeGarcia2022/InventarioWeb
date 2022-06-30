@@ -29,7 +29,7 @@
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
          <div class="col-auto bg-gray p-5 text-center">
         <h1 class='text-center'>Información de Productos</h1>
-        <form action="actualizoProducto" method="post">
+        <form action="actualizarProducto" method="post">
         <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">ID Producto:</label>
             <div class="col-sm-10">
@@ -84,10 +84,15 @@
                                  cats = daoC.Listar();
                                  for(Categoria cat : cats){
                                     %>
-                                   <option value='<%= cat.getId_categoria()%>'><%=cat.getNom_categoria()%></option> 
+                                   <option value='<%= categoria%>'><%= cat.getNom_categoria()%></option> 
                             <%}%>
                         </select>
-                        <%
+                        
+                            
+                   </div>
+                </div>
+          
+          <%
                                  
                              }catch(Exception e){
                                  out.print("Se encontro el siguiente error"+e);
@@ -95,18 +100,13 @@
                              }
                                     
                              %>
-                            
-                   </div>
-                </div>
-          
-          
           <div class="mb-3 row">
           <button type="submit" name="send" class="btn btn-success">Actualizar Productos</button>
           </div>
         </form>
           
           <%
-            String dato = request.getParameter("aviso");
+            String dato = request.getParameter("avisoP");
             if(dato!=null){
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");

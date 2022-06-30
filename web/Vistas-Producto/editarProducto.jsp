@@ -27,7 +27,7 @@
     </head>
     <body class="justify-content-center">
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center">
+         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
         <h1 class='text-center'>Información de Productos</h1>
         <form action="actualizarProducto" method="post">
         <div class="mb-3 row">

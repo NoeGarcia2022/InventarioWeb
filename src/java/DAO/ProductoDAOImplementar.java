@@ -65,7 +65,6 @@ public class ProductoDAOImplementar implements ProductoDAO{
          this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
         Producto producto = new Producto();
         StringBuilder miSQL = new StringBuilder();
-        
         miSQL.append("select * from tb_producto where id_producto = '"+id_pro_edit+"';");
         try{
             ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
@@ -104,7 +103,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 
                 //System.out.println("Update");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("UPDATE tb_producto SET id_producto = '"+producto.getId_producto()+"', nom_producto = '"+producto.getNom_producto()+"', stock = '"+producto.getStock()+"', precio = '"+producto.getPrecio()+"', unidad_de_medida = '"+producto.getUnidadMedida()+"', estado_producto = '"+producto.getEstado()+"', id_categoria = '"+producto.getCategoria_id()+"' WHERE id_producto = "+producto.getId_producto()+";");
+                miSQL.append("UPDATE tb_producto SET id_producto='"+producto.getId_producto()+"',nom_producto='"+producto.getNom_producto()+"',stock='"+producto.getStock()+"',precio='"+producto.getPrecio()+"',unidad_de_medida='"+producto.getUnidadMedida()+"',estado_producto='"+producto.getEstado()+"',id_categoria='"+producto.getCategoria_id()+"' WHERE id_producto="+producto.getId_producto());
                 this.conn.ejecutarSQL(miSQL.toString());
             }
            guarda = true;

@@ -76,35 +76,31 @@
                    <label for="categoria" class="col-sm-2 col-form-label">Categoria</label>
                    <div class="custom-select col-sm-10">
                          <select class="form-control" name="categoria" id="categoria" required>
-                             <option>Selecciones una opcion</option>>
+                             <option><%= NCategoria%></option>
                              <%
                              CategoriaDAO daoC = new CategoriaDAOImplementar();
                              List<Categoria> cats = null;
                              try{
                                  cats = daoC.Listar();
                                  for(Categoria cat : cats){
-                                    %>
-                                   <option value='<%= categoria%>'><%= cat.getNom_categoria()%></option> 
+                            %>
+                                   <option value='<%= cat.getId_categoria()%>'><%= cat.getNom_categoria()%></option> 
                             <%}%>
-                        </select>
-                        
-                            
+                        </select>        
                    </div>
-                </div>
-          
+                </div>      
           <%
                                  
-                             }catch(Exception e){
-                                 out.print("Se encontro el siguiente error"+e);
-                             }finally{
-                             }
+            }catch(Exception e){
+                out.print("Se encontro el siguiente error"+e);
+            }finally{
+            }
                                     
-                             %>
+           %>
           <div class="mb-3 row">
           <button type="submit" name="send" class="btn btn-success">Actualizar Productos</button>
           </div>
         </form>
-          
           <%
             String dato = request.getParameter("avisoP");
             if(dato!=null){

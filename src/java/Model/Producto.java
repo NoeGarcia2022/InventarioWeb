@@ -18,8 +18,8 @@ public class Producto {
         this.id_producto = 0;
         this.nom_producto = "";
         this.categoria_id=0;
-        this.stock = 0.0f;
-        this.precio=0.0f;
+        this.stock = 000.00f;
+        this.precio=000.00f;
         this.unidadMedida="";
         this.estado=1;
         this.categoria = new Categoria();

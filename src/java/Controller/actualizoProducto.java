@@ -71,9 +71,10 @@ public class actualizoProducto extends HttpServlet {
          pro.setUnidadMedida(UnidadMedida);
          pro.setEstado(Integer.parseInt(estado));
          pro.setCategoria_id(Integer.parseInt(categoria));
+         pro.setCat(NCategoria);
          if(producto.guardarPro(pro)==true){
              //System.out.println("Registro Actualizado.");
-              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProducto.jsp?avisoP=ok");
+              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProducto.jsp?aviso=ok");
               dispatcher.forward(request, response);
          }else{
              System.out.println("Error. El registro no se pudo actualizar.");

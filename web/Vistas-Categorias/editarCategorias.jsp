@@ -18,10 +18,7 @@
     </head>
     <body class="justify-content-center">
         <style>
-            label{
-              color:green  
-          }   
-               form{
+        form{
 	width:600px;
 	padding:16px;
 	border-radius:14px;
@@ -46,8 +43,13 @@
             
         </style>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
+         <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+         <div class="col-auto bg-gray p-5 text-center">
         <h1 class='text-center'>Información de Categoria</h1>
+        <div class="row">&nbsp;</div>
         <form action="actualizarCategoria" method="post">
         <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">

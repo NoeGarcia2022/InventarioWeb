@@ -10,13 +10,20 @@
     </head>
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        
         
         <!--<div style="width: 600px;">-->
-        <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
+        <div class="col-auto bg-gray p-5 text-center">
+            <h3>Listado de Categorias</h3>
+            <div class="row">&nbsp;</div>
             <a href="<%= request.getContextPath() %>/categorias?opcion=crear" class ="btn btn-primary btn-sm glyphicon glyphicon-pencil" role="button">
                 Nueva categoria
             </a>
-            <h3>Listado de Categorias</h3>
+            <div class="row">&nbsp;</div>
             <table class="table table-striped">
                 <tr>
                     <th>

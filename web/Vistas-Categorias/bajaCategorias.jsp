@@ -19,12 +19,20 @@
     </head>
     <body>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+         <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
         <div class="col-auto bg-gray p-5 text-center ">
             <h1>Baja de Categorias</h1>
-            
+            <div class="row">&nbsp;</div>
             <h4 style="color: seagreen">¿Realmente Desea Eliminar el Registro?</h4>
             <h5>ID Categoria: <%= id_cat %></h5>
             <h5>Nombre Categoria: <%= nombre_cat %></h5>
+            <div class="alert alert-danger" role="alert">
+  ADVERTENCIA : Sí elimina está Categoria también eliminarán todos los
+  <a href="productos?opcionP=listarP" class="alert-link">Productos</a>. relacionados a esta.
+</div>
         </div>
         
         <!---->
@@ -37,10 +45,10 @@
         </div>
         
         <div class="row justify-content-center">
-        <div class="col-4 bg-white">
+        <div class="row">
             &nbsp;
         </div>
-        <div class="col-4 bg-white">
+        <div class="row">
             &nbsp;
         </div>
       </div>

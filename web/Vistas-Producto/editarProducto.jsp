@@ -25,58 +25,64 @@
         <title>Actualizar Productos</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body class="justify-content-center">
+    <body>
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
+         <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+         <div class="col-auto bg-gray p-5 text-center">
         <h1 class='text-center'>Información de Productos</h1>
-        <form action="actualizarProducto" method="post">
-        <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">ID Producto:</label>
-            <div class="col-sm-10">
-              <input type="text" value='<%= id_pro %>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Producto">
-              <input type="hidden" value='<%= id_pro %>' name="idP" id="idP" readonly class="form-control-plaintext" id="staticEmail" >
+        <div class="row">&nbsp;</div>
+        <form action="actualizarProducto" class="form-horizontal" method="post">
+         <div class="row">
+        <div class="col-6">
+            <label for="staticEmail" class="form-label">ID Producto:</label>
+            <div class="col-sm-12">
+              <input type="text" value='<%= id_pro %>' name="id1" id="id1" readonly class="form-control" id="staticEmail" placeholder="ID Producto">
+              <input type="hidden" value='<%= id_pro %>' name="idP" id="idP" readonly class="form-control" id="staticEmail" >
             </div>
         </div>
             
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Nombre del Producto</label>
-          <div class="col-sm-10">
+        <div class="col-6">
+          <label for="inputPassword" class="form-label">Nombre del Producto</label>
+          <div class="col-sm-12">
               <input type="text" value='<%= nombre_pro %>' name="nombreP" id="nombreP" class="form-control" placeholder="Nombre Categoria" required="true">
           </div>
         </div>
           
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Stock:</label>
-          <div class="col-sm-10">
+        <div class="col-6">
+          <label for="inputPassword" class="form-label">Stock:</label>
+          <div class="col-sm-12">
               <input type="text" value='<%= stock %>' name="stock" id="stock" class="form-control" placeholder="" required="true">
           </div>
         </div>
           
-          <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Precio:</label>
-          <div class="col-sm-10">
+          <div class="col-6">
+          <label for="inputPassword" class="form-label">Precio:</label>
+          <div class="col-sm-12">
               <input type="text" value='<%= precio %>' name="precio" id="precio" class="form-control" placeholder="" required="true">
           </div>
         </div>
-          <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Unidad de medida</label>
-          <div class="col-sm-10">
+          <div class="col-6">
+          <label for="inputPassword" class="form-label">Unidad de medida</label>
+          <div class="col-sm-12">
               <input type="text" value='<%= UnidadMedida %>' name="unidadMedida" id="stock" class="form-control" placeholder="" required="true">
           </div>
         </div>
-          <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Estado:</label>
-          <div class="col-sm-10">
+          <div class="col-6">
+          <label for="inputPassword" class="form-label">Estado:</label>
+          <div class="col-sm-12">
               <input type="text" value='<%= estado %>' name="estado" id="estado" class="form-control" placeholder="" required="true">
           </div>
         </div>
   
           
-          <div class="mb-3 row ">
-                   <label for="categoria" class="col-sm-2 col-form-label">Categoria</label>
-                   <div class="custom-select col-sm-10">
+          <div class="col-6">
+                   <label for="categoria" class="form-label">Categoria</label>
+                   <div class="custom-select col-sm-12">
                          <select class="form-control" name="categoria" id="categoria" required>
-                             <option><%= NCategoria%></option>
+                             <option>Selecciones una Categoria</option>
                              <%
                              CategoriaDAO daoC = new CategoriaDAOImplementar();
                              List<Categoria> cats = null;
@@ -97,7 +103,8 @@
             }
                                     
            %>
-          <div class="mb-3 row">
+           <div class="row">&nbsp;</div>
+          <div class="col-sm-offset-2 col-sm-12">
           <button type="submit" name="send" class="btn btn-success">Actualizar Productos</button>
           </div>
         </form>
@@ -113,7 +120,7 @@
            <%   
                }
            %>
-
+</div>
         </div>
          <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>

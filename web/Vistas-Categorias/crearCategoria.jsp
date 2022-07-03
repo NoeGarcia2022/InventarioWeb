@@ -37,9 +37,13 @@
         </style>
         
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-         <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+         <div class="col-auto bg-gray p-5 text-center" >
             <h3 class='text-center'>Registro Categorias</h3>
-            
+            <div class="row">&nbsp;</div>
             <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath() %>/categorias" method="post">
               <div class="row">&nbsp;</div>
                 <input type="hidden" name="id_categoria" id="id_categoria" value="<%= categoria.getId_categoria() %>" >

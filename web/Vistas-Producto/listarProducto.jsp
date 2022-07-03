@@ -15,13 +15,20 @@
  
     <body>
        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+       <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">&nbsp;</div>
+
         
         <!--<div style="width: 600px;">-->
-        <div class="col-auto bg-gray p-5 text-center" style="border: 12px solid ">
+        <div class="col-auto bg-gray p-5 text-center">
+            <h3>Listado de Productos</h3>
+            <div class="row">&nbsp;</div>
             <a href="<%= request.getContextPath() %>/productos?opcionP=crearP" class ="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">
                 Nuevo Producto
             </a>
-            <h3>Listado de Productos</h3>
+            <div class="row">&nbsp;</div>
             <table class="table table-striped">
                 <tr>
                     <th>
@@ -43,9 +50,6 @@
                         ESTADO
                     </th>
                     <th>
-                       ID CATEGORIA
-                    </th>
-                    <th>
                        CATEGORIA
                     </th>
                     <th>
@@ -64,7 +68,6 @@
                      <td><%= pro.getPrecio()%></td>
                      <td><%= pro.getUnidadMedida()%></td>
                      <td><%= pro.getEstado()%></td>
-                     <td><%= pro.getCategoria_id()%></td>
                      <td><%= pro.getCat()%></td>
                      
                    

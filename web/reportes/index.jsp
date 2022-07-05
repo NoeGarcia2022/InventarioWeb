@@ -11,14 +11,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <style>
+   
+    </style>
+   
+     
     <body>
+        
+    <center>
         <h1>Reportes Inventario Web</h1>
+    </center>
+        
         <hr>
+          <center> 
+    <li>
+        <a class="btn btn-outline-light" href="${pageContext.request.contextPath}/index.jsp">
+               INICIO
+        </a><br><br>
+    </li>
+        
         <label>
             <li>
-                <a href="${pageContext.request.contextPath}/reportes/rpt2.jsp">
+            <a href="${pageContext.request.contextPath}/reportes/rpt1.jsp">
+                    Reporte Tabla Categoria
+                </a></li>
+                <li>
+                    <a href="${pageContext.request.contextPath}/reportes/rpt2.jsp">
                     Reporte Tabla Producto
                 </a></li>
         </label>
+          </center>      
     </body>
 </html>

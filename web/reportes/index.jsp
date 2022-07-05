@@ -25,7 +25,7 @@
         <hr>
           <center> 
     <li>
-        <a class="btn btn-outline-light" href="${pageContext.request.contextPath}/index.jsp">
+        <a href="${pageContext.request.contextPath}/index.jsp">
                INICIO
         </a><br><br>
     </li>

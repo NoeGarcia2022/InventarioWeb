@@ -1,14 +1,12 @@
-<%-- 
-    Document   : rpt1
-    Created on : 07-04-2022, 11:53:35 AM
-    Author     : Gabriel
---%>
 
+
+<%@page import="Factory.FactoryConexionDB"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.*"%>
 <%@page import="java.io.File"%>
+
 <%@page import="java.sql.*"%>
-<%@page import="config.Conexion" %>
+
 <%@page import="net.sf.jasperreports.engine.JasperRunManager" %>
 
 <!DOCTYPE html>
@@ -21,17 +19,12 @@
        
  <%
  //variables a utilizar
- Conexion c = new Conexion ();
+ FactoryConexionDB factory;
  Connection con;
- Class.forName(c.getDriver());
- con = DriverManager.getConnection(
-                      c.getUrl(),
-                      c.getUser(),
-                      c.getPass()
- );
+ Class.forName("com.mysql.jdbc.Driver");
+ con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_inventario","root","");
+                     
 File jasperFile = new File(application.getRealPath("reportes/rpt1.jasper"));
-Map parametro = new HashMap();
-//parametro.put("parametro1","aqui va el valor");
 byte[] bytes = JasperRunManager.runReportToPdf(jasperFile.getPath(), null,con);
      
 response.setContentType("application/pdf");

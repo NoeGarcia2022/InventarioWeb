@@ -25,7 +25,7 @@
         <hr>
           <center> 
     <li>
-        <a href="${pageContext.request.contextPath}/index.jsp">
+        <a href="${pageContext.request.contextPath}/Principal.jsp">
                INICIO
         </a><br><br>
     </li>

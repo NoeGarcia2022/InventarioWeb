@@ -44,8 +44,8 @@
 				<text><![CDATA[Reporte Producto]]></text>
 			</staticText>
 			<image>
-				<reportElement x="363" y="0" width="133" height="107" uuid="b684a4a7-63d6-440a-b2a1-bf7c20f49be9"/>
-				<imageExpression><![CDATA["C:\\Users\\Gabriel\\Pictures\\producto.jpg"]]></imageExpression>
+				<reportElement x="302" y="13" width="114" height="79" uuid="667a88c9-03b0-4e15-85cb-118084eeb731"/>
+				<imageExpression><![CDATA["C:\\Users\\Gabriel\\Music\\InventarioWeb\\web\\assets\\img\\producto.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>

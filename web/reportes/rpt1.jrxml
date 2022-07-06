@@ -32,8 +32,8 @@
 				<text><![CDATA[Reporte Categorias]]></text>
 			</staticText>
 			<image>
-				<reportElement x="336" y="12" width="205" height="103" uuid="ac152a96-0cab-47e7-92c2-60f7ea870843"/>
-				<imageExpression><![CDATA["C:\\Users\\Gabriel\\Pictures\\categoria.jpg"]]></imageExpression>
+				<reportElement x="356" y="20" width="197" height="107" uuid="69a12837-2cc4-4fb2-8bc6-c6419dbeb080"/>
+				<imageExpression><![CDATA["C:\\Users\\Gabriel\\Music\\InventarioWeb\\web\\assets\\img\\categoria.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>

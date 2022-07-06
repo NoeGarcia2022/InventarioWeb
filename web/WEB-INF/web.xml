@@ -36,6 +36,10 @@
         <servlet-name>Registroo</servlet-name>
         <servlet-class>Controller.Registroo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controlador</servlet-name>
+        <servlet-class>controlador.Controlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>Registroo</servlet-name>
         <url-pattern>/registroo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador</servlet-name>
+        <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

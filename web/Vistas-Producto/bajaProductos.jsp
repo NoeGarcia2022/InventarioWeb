@@ -14,10 +14,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Baja Producto</title>
-        <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
+        <%@include file = "../WEB-INF/Vistas-Parciales/css-js1.jspf" %>
     </head>
     <body>
-         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado1.jspf" %>
          <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
@@ -50,6 +50,6 @@
       </div>
         
         
-         <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
+         <%@include file = "../WEB-INF/Vistas-Parciales/pie1.jspf" %>
     </body>
 </html>

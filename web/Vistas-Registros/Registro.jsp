@@ -140,7 +140,7 @@
 
 
                                     <input type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/>
-                                    <a href="Login.jsp">Regresar</a>
+                                    <a style="margin-left: 10px; border: none; color: black" class="btn btn-outline-info btn-sm" href="Controlador?accion=Salir">Regresar</a>
                             </div>
                         </div>
                     </div>

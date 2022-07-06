@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Control de inventario</title>
-         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
+         <%@include file = "../WEB-INF/Vistas-Parciales/css-js1.jspf" %>
          <script type="text/javascript">
              function regresar(url){
                  location.href = url;
@@ -36,7 +36,7 @@
        }
         </style>
         
-        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado1.jspf" %>
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
@@ -75,6 +75,6 @@
                 <div class="row">&nbsp;</div>
             </form>
          </div>
-        <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
+        <%@include file = "../WEB-INF/Vistas-Parciales/pie1.jspf" %>
     </body>
 </html>

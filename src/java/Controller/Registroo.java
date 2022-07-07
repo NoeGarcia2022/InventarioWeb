@@ -89,8 +89,9 @@ public class Registroo extends HttpServlet {
         } else if (estado.equals("crear")) {
             System.out.println("Crear registros...");
             String pagina = "/Vistas-Registros/Registro.jsp";
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
-            dispatcher.forward(request, response);
+            response.sendRedirect(pagina);
+            /*RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+            dispatcher.forward(request, response);*/
         } else {
 
         }

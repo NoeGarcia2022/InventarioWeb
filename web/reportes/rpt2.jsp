@@ -26,7 +26,7 @@
  Class.forName("com.mysql.jdbc.Driver");
  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_inventario","root","");
                      
-File jasperFile = new File(application.getRealPath("reportes/report2.jasper"));
+File jasperFile = new File(application.getRealPath("reportes/pro.jasper"));
 byte[] bytes = JasperRunManager.runReportToPdf(jasperFile.getPath(), null,con);
      
 response.setContentType("application/pdf");

@@ -109,7 +109,7 @@
           </div>
         </form>
           <%
-            String dato = request.getParameter("avisoP");
+            String dato = request.getParameter("aviso");
             if(dato!=null){
                 //out.print("Registro Actualizado Correctamente");
                 //System.out.println("End");

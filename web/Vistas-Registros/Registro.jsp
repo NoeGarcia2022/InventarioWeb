@@ -5,13 +5,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro de Usuarios</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script type="text/javascript">
-             function regresar(url){
-                 location.href = url;
-             }
-         </script>
+            function regresar(url) {
+                location.href = url;
+            }
+        </script>
     </head>
     <body>
         <!-- Section: Design Block -->
@@ -74,68 +74,89 @@
 
                         <div class="card bg-glass">
                             <div class="card-body px-4 py-5 px-md-5">
-                                <form action="<%= request.getContextPath() %>/registroo" method="post">
-                                        <input type="hidden" name="id_empleado" id="id_empleado" value="<%= empleado.getId() %>" >
+                                <form action="<%= request.getContextPath()%>/registroo" method="post" class="needs-validation" novalidate>
+                                    <input type="hidden" name="id_empleado" id="id_empleado" value="<%= empleado.getId()%>" >
                                     <!-- 2 column grid layout with text inputs for the first and last names -->
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" name="txtnombre" value="<%= empleado.getNom() %>" placeholder="ingrese su nombre">
+                                                <input type="text" class="form-control" name="txtnombre" value="<%= empleado.getNom()%>" placeholder="ingrese su nombre" required>
                                                 <label for="nombre">Nombres</label>
                                             </div>
                                         </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" name="txtapellidos" value="<%= empleado.getApell() %> "placeholder="ingrese su apellido">
+                                                <input type="text" class="form-control" name="txtapellidos" value="<%= empleado.getApell()%>" placeholder="ingrese su nombre" required>
                                                 <label for="apellidos">Apellidos</label>
                                             </div>
                                         </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                     </div>
+                                                
+                                                
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" name="numbertipo" value="<%= empleado.getTipo() %>" placeholder="ingrese su nombre">
+                                                <input type="number" class="form-control" name="numbertipo" value="<%= empleado.getTipo()%>" placeholder="Tipo" required>
                                                 <label for="tipo">Tipo</label>
                                             </div>
                                         </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" name="numberEstado" value="<%= empleado.getEstado() %>" placeholder="ingrese su apellido">
+                                                <input type="number" class="form-control" name="numberEstado" value="<%= empleado.getEstado()%>" placeholder="Estado" required>
                                                 <label for="estado">Estado</label>
                                             </div>
                                         </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                     </div>
+                                    
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" name="txtdui" value="<%= empleado.getDui() %>" placeholder="ingrese su dui">
+                                                <input type="text" class="form-control" name="txtdui" value="<%= empleado.getDui()%>" placeholder="ingrese su dui" required>
                                                 <label for="dui">DUI</label>
                                             </div>
                                         </div>
+                                                <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" name="txtTel" value="<%= empleado.getTel() %>" placeholder="ingrese su telefono">
+                                                <input type="text" class="form-control" name="txtTel" value="<%= empleado.getTel()%>" placeholder="ingrese su telefono" required>
                                                 <label for="telefono">Telefono</label>
                                             </div>
                                         </div>
+                                                <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
                                     </div>
 
                                     <!-- Email input -->
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" name="txtemail" value="<%= empleado.getEmail() %>" placeholder="ingrese su correo">
+                                        <input type="email" class="form-control" name="txtemail" value="<%= empleado.getEmail()%>" placeholder="ingrese su correo" required>
                                         <label for="email">Correo Electronico</label>
                                     </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
 
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="txtUser" value="<%= empleado.getUser() %>" placeholder="ingrese un nombre de usuario">
+                                        <input type="text" class="form-control" name="txtUser" value="<%= empleado.getUser()%>" placeholder="ingrese un nombre de usuario" required>
                                         <label for="usuario">Usuario</label>
                                     </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
 
                                     <!-- Password input -->
                                     <div class="form-floating mb-3">
-                                        <input type="password" class="form-control" name="txtClave" value="<%= empleado.getClave() %>" placeholder="ingrese un contraseña">
+                                        <input type="password" class="form-control" name="txtClave" value="<%= empleado.getClave()%>" placeholder="ingrese un contraseña" required>
                                         <label for="clave">Contraseña</label>
                                     </div>
+                                        <div class="valid-feedback"></div>
+                                        <div class="invalid-feedback"></div>
 
 
 
@@ -151,4 +172,26 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
+    <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (!form.checkValidity()) {
+                                    event.preventDefault()
+                                    event.stopPropagation()
+                                }
+
+                                form.classList.add('was-validated')
+                            }, false)
+                        })
+            })()
+    </script>
 </html>

@@ -11,6 +11,12 @@
             function regresar(url) {
                 location.href = url;
             }
+            
+        function registrar() {
+            var respuesta = confirm("Usuario registrado correctamente");
+            return respuesta
+        }
+    </script>
         </script>
     </head>
     <body>
@@ -95,8 +101,8 @@
                                         <div class="valid-feedback"></div>
                                         <div class="invalid-feedback"></div>
                                     </div>
-                                                
-                                                
+
+
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
@@ -115,7 +121,7 @@
                                         <div class="valid-feedback"></div>
                                         <div class="invalid-feedback"></div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
@@ -123,7 +129,7 @@
                                                 <label for="dui">DUI</label>
                                             </div>
                                         </div>
-                                                <div class="valid-feedback"></div>
+                                        <div class="valid-feedback"></div>
                                         <div class="invalid-feedback"></div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-floating mb-3">
@@ -131,7 +137,7 @@
                                                 <label for="telefono">Telefono</label>
                                             </div>
                                         </div>
-                                                <div class="valid-feedback"></div>
+                                        <div class="valid-feedback"></div>
                                         <div class="invalid-feedback"></div>
                                     </div>
 
@@ -140,27 +146,25 @@
                                         <input type="email" class="form-control" name="txtemail" value="<%= empleado.getEmail()%>" placeholder="ingrese su correo" required>
                                         <label for="email">Correo Electronico</label>
                                     </div>
-                                        <div class="valid-feedback"></div>
-                                        <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
 
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" name="txtUser" value="<%= empleado.getUser()%>" placeholder="ingrese un nombre de usuario" required>
                                         <label for="usuario">Usuario</label>
                                     </div>
-                                        <div class="valid-feedback"></div>
-                                        <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
 
                                     <!-- Password input -->
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control" name="txtClave" value="<%= empleado.getClave()%>" placeholder="ingrese un contraseña" required>
                                         <label for="clave">Contraseña</label>
                                     </div>
-                                        <div class="valid-feedback"></div>
-                                        <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback"></div>
 
-
-
-                                    <input type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/>
+                                    <input onclick="return registrar()" type="submit" class="btn btn-outline-info btn-sm" value="Guardar" name="btnGuardar"/>
                                     <a style="margin-left: 10px; border: none; color: black" class="btn btn-outline-info btn-sm" href="Controlador?accion=Salir">Regresar</a>
                             </div>
                         </div>
@@ -171,16 +175,14 @@
         <!-- Section: Design Block -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
     </body>
     <script>
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
             (function () {
                 'use strict'
 
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
                 var forms = document.querySelectorAll('.needs-validation')
 
-                // Loop over them and prevent submission
                 Array.prototype.slice.call(forms)
                         .forEach(function (form) {
                             form.addEventListener('submit', function (event) {

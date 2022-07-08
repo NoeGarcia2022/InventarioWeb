@@ -7,6 +7,8 @@ import Model.Empleado;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
+
 
 public class RegistroDAOimplementarr implements RegistroDAO {
     
@@ -95,6 +97,7 @@ this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
                 .append(empleado.getTel()+ "', '").append(empleado.getUser()+ "', '").append(empleado.getClave()+ "', '").append(empleado.getTipo()+ "', '").append(empleado.getEstado());
                 miSQL.append("');");
                 this.conn.ejecutarSQL(miSQL.toString());
+                
             }else if(empleado.getId()> 0){
                 
                 //System.out.println("Update");

@@ -17,8 +17,8 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js1.jspf" %>
     </head>
     <body>
-         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado1.jspf" %>
-         <div class="row">&nbsp;</div>
+        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado1.jspf" %>
+        <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
@@ -26,30 +26,28 @@
             <h1>Baja de Productos</h1>
             <div class="row">&nbsp;</div>
             <h4 style="color: seagreen">¿Realmente Desea Eliminar el Registro?</h4>
-            <h5>ID Categoria: <%= id_pro %></h5>
-            <h5>Nombre Categoria: <%= nombre_pro %></h5>
+            <h5>ID Categoria: <%= id_pro%></h5>
+            <h5>Nombre Categoria: <%= nombre_pro%></h5>
         </div>
-        
+
         <!---->
         <a href="../WEB-INF/web.xml"></a>
-        
+
         <div class="d-grid gap-5 d-md-flex justify-content-md-center">
-            <a href="BajaProducto?respuesta=yes&&idP=<%= id_pro %>" class="btn btn-danger btn-lg" role="button">Si / Aceptar</a>
+            <a href="BajaProducto?respuesta=yes&&idP=<%= id_pro%>" class="btn btn-danger btn-lg" role="button">Si / Aceptar</a>
             <!--<a href="< //request.getContextPath() >" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>-->
             <a href="productos?opcionP=listarP" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>
-            
+
         </div>
-        
+
         <div class="row justify-content-center">
-        <div class="row">
-            &nbsp;
+            <div class="row">
+                &nbsp;
+            </div>
+            <div class="row">
+                &nbsp;
+            </div>
         </div>
-        <div class="row">
-            &nbsp;
-        </div>
-      </div>
-        
-        
-         <%@include file = "../WEB-INF/Vistas-Parciales/pie1.jspf" %>
+        <%@include file = "../WEB-INF/Vistas-Parciales/pie1.jspf" %>
     </body>
 </html>

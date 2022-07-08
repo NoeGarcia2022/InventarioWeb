@@ -29,5 +29,5 @@
                             Noé Antonio García Valle<br>
                             Jonathan Alexis Molina Crespín</p><br><br><br><br>
                             <%@include file="WEB-INF/Vistas-Parciales/pie1.jspf" %>
-        </body>
+    </body>
 </html>

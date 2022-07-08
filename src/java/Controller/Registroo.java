@@ -89,9 +89,8 @@ public class Registroo extends HttpServlet {
         } else if (estado.equals("crear")) {
             System.out.println("Crear registros...");
             String pagina = "/Vistas-Registros/Registro.jsp";
-            response.sendRedirect(pagina);
-            /*RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
-            dispatcher.forward(request, response);*/
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+            dispatcher.forward(request, response);
         } else {
 
         }
@@ -144,7 +143,9 @@ Empleado empleado = new Empleado();
         empleado.setClave(request.getParameter("txtClave"));
         RegistroDAOimplementarr guardaEmpleado = new RegistroDAOimplementarr();
         guardaEmpleado.guardarEmp(empleado);
-        this.listaEmpleados(request, response);    }
+        /*this.listaEmpleados(request, response);*/
+        request.getRequestDispatcher("Loginn.jsp").forward(request, response);
+    }
 
     /**
      * Returns a short description of the servlet.
